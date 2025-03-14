@@ -1,6 +1,4 @@
-# GatorGrubAI 
-
-# Model Description
+# GatorGrubAI ML Model
 
 Model will attempt to identify images that contain phrases pertaining to "free food". Currently the model output layer consists of 2 neutrons: food, no food. Personalized dataset used. 
 
