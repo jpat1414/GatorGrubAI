@@ -62,7 +62,6 @@ def apply_augmentation(image_path):
     reader = easyocr.Reader(['en'])
     results = reader.readtext(resized)
     detected_text = [result[1].lower() for result in results]
-    print("Detected Text:", detected_text)
 
     # Use Hugging Face Client for classification
     response = client.text_generation(f'''The text is: {detected_text}.
@@ -70,7 +69,6 @@ ANSWER ONLY 'Free food detected' or 'No free food detected'
 if any of the words in the text are in the keywords list: {keywords}.
 Do not return anything else.
 Pizza can look like pizal, but it is still pizza.''')
-    print("Model response: ", response)
 
     return augmented_image, response
 

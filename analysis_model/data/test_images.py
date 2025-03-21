@@ -6,5 +6,7 @@ def create_test_image(text, filename):
     draw.text((10, 40), text, fill=(0, 0, 0))
     img.save(filename)
 
-create_test_image("Free Pizza at 6 PM!", "test1.png")
-create_test_image("Join us for dinner!", "test2.png")
+
+# Use this format to create test images with different food-related phrases
+create_test_image("Golden pancakes stack.", "test33.png")
+create_test_image("Savory tomato basil soup.", "test34.png")

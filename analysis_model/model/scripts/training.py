@@ -1,21 +1,10 @@
+import utils
 import main_model
-from main_model import GrubDataset
-from main_model import DataLoader
+import augmentation
 
-import glob
+epochs = 1
 
-# Initializing batch size
-n = 32
-
-# Train dataset and initialize dataloader
-train_path = ''
-train_dataset = GrubDataset(train_path)
-train_loader = DataLoader(train_dataset, batch_size=n, shuffle=True)
-train_N = len(train_loader.dataset)
-
-# Validation dataset and initialize dataloader
-valid_path = ''
-valid_dataset = GrubDataset(valid_path)
-valid_loader = DataLoader(valid_dataset, batch_size=n, shuffle=False)
-valid_N = len(valid_loader.dataset)
-
+for epoch in range(epochs):
+    print('Epoch: {}'.format(epoch))
+    utils.train(main_model.grub_model, utils.train_loader, utils.train_N, augmentation.apply_augmentation, main_model.optimizer, main_model.loss_function)
+    utils.validate(main_model.grub_model, utils.valid_loader, utils.valid_N, main_model.loss_function)
