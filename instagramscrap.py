@@ -20,7 +20,7 @@ def download_posts():
                 break
 
             post_info = {
-                'post_url': post.url,
+                'post_url': f"https://www.instagram.com/p/{post.shortcode}",
                 'post_caption': post.caption,
                 'post_date': post.date_local,
                 'post_likes': post.likes,
