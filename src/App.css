@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* General Reset & Base Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #00c6ff, #f7d488);
   min-height: 100vh;
+}
+
+/* ----------- Homepage Styles ----------- */
+.home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+  text-align: center;
+}
+
+.home-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.home-subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 40px;
+}
+
+.home-button {
+  background-color: black;
   color: white;
+  font-size: 1.8rem;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.home-button:hover {
+  background-color: #2e2e2e;
+  transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ----------- Calendar Page Styles ----------- */
+.calendar-container {
+  padding: 40px;
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #00c6ff, #f7d488);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: black;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.date-picker {
+  padding: 12px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: 2px solid black;
+  margin-bottom: 30px;
+}
+
+/* Event Results */
+.event-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.event-details {
+  background-color: white;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.event-details h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.event-details p {
+  margin-bottom: 0;
+}
+
+.event-details a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.event-details a:hover {
+  text-decoration: underline;
+}
+
+.no-events {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Back Button */
+.back-button {
+  margin-top: 40px;
+  background-color: black;
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #2e2e2e;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .home-title {
+    font-size: 3rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .home-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .home-button {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+  }
+
+  .date-picker {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .event-details {
+    padding: 15px;
+  }
+
+  .back-button {
+    font-size: 1rem;
+    padding: 10px 20px;
   }
 }
