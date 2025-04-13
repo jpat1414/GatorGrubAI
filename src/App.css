@@ -114,6 +114,43 @@ body {
   color: #333;
 }
 
+/* Header Styles */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  z-index: 1000;
+}
+
+
+/* Layout and stacking */
+.logo-area {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo-img {
+  height: 100px; /* 🔼 Bigger logo */
+  width: auto;
+  margin-right: 15px;
+}
+
+.logo-text-stack {
+  display: flex;
+  flex-direction: column; /* 🔽 Stack vertically */
+  line-height: 1.1;
+}
+
+.logo-text {
+  font-size: 1.8rem; /* 🔼 Bigger text */
+  font-weight: bold;
+  color: black;
+}
+
+
+
 /* Back Button */
 .back-button {
   margin-top: 40px;
